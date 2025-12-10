@@ -1,0 +1,94 @@
+{
+    "comida": [
+        {
+            "monto": 1500,
+            "descripcion": "papas de la tienda",
+            "fecha": "2025-12-01"
+        },
+        {
+            "monto": 5000,
+            "descripcion": "pastel",
+            "fecha": "2025-12-02"
+        },
+        {
+            "monto": 15000,
+            "descripcion": "papas",
+            "fecha": "2025-11-25"
+        },
+        {
+            "monto": 3000,
+            "descripcion": "Dona de campuslands",
+            "fecha": "2025-02-09"
+        },
+        {
+            "monto": 500,
+            "descripcion": "menta",
+            "fecha": "2025-03-12"
+        },
+        {
+            "monto": 15000,
+            "descripcion": "comida para los michis",
+            "fecha": "2025-12-03"
+        }
+    ],
+    "entretenimiento": [
+        {
+            "monto": 50000,
+            "descripcion": "televisor",
+            "fecha": "2026-01-04"
+        }
+    ],
+    "salidas": [
+        {
+            "monto": 5000,
+            "descripcion": "me comi un helado con un amigo",
+            "fecha": "2025-11-15"
+        }
+    ],
+    "transporte": [
+        {
+            "monto": 8500,
+            "descripcion": "casa de joel",
+            "fecha": "2025-11-02"
+        },
+        {
+            "monto": 10000,
+            "descripcion": "casa de paula",
+            "fecha": "2025-06-12"
+        },
+        {
+            "monto": 5000,
+            "descripcion": "para mi casa",
+            "fecha": "2025-02-06"
+        },
+        {
+            "monto": 6000,
+            "descripcion": "Carro pa la casa",
+            "fecha": "2025-12-02"
+        },
+        {
+            "monto": 15000,
+            "descripcion": "Not Description",
+            "fecha": "2025-12-03"
+        }
+    ],
+    "servicios": [
+        {
+            "monto": 200000,
+            "descripcion": "La luz",
+            "fecha": "2025-9-3"
+        },
+        {
+            "monto": 200000,
+            "descripcion": "El gas",
+            "fecha": "2025-12-02"
+        }
+    ],
+    "otros": [
+        {
+            "monto": 2000,
+            "descripcion": "Not Description",
+            "fecha": "2025-12-04"
+        }
+    ]
+}
