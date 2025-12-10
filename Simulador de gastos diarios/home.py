@@ -8,6 +8,7 @@ from datetime import datetime,date
 # Ruta de la base de datos donde estan los gastos
 GASTOS_DATABASE_PATH = "./dataBase/gastos.json"
 TABLES_DATABASE_PATH = "./dataBase/tables.json"
+REPORTE_DETALLADO = "./reports/Reporte_detallado_de_gastos.json"
 
 while True:
     Limpiar_Pantalla()
@@ -125,8 +126,7 @@ while True:
                     start_dt = input(INPUT("Coloque la fecha de inicio: "))
                     
                     if validar_fecha(start_dt):
-                        start_dt = datetime.strptime(start_dt, "%Y-%m-%d")
-                        if start_dt > hoy:
+                        if datetime.strptime(start_dt, "%Y-%m-%d") > hoy:
                             ERROR("La fecha todavia no ha pasado")
                         else:
                             
@@ -136,11 +136,10 @@ while True:
                 while True:
                     end_dt = input(INPUT("Coloque la fecha de fin: "))
                     if validar_fecha(end_dt):
-                        end_dt = datetime.strptime(end_dt, "%Y-%m-%d")
-                        if start_dt > end_dt:
+                        if datetime.strptime(start_dt, "%Y-%m-%d") > datetime.strptime(end_dt, "%Y-%m-%d"):
                             ERROR("la fecha de fin no puede ser menor")
                         else:
-                            if end_dt > hoy:
+                            if datetime.strptime(end_dt, "%Y-%m-%d") > hoy:
                                 ERROR("La fecha todavia no ha pasado")
                             else:
                                 break
@@ -150,9 +149,15 @@ while True:
                 if validarSI_NO("Desea filtrar por categoria") == "si":
                     userCategoria = imprmir_mini_menu(gastosData)
                     gastos_filtrados = tabla_developer(gastosData,5,userCategoria=userCategoria,start_dt=start_dt,end_dt=end_dt)
+                    saveFile(REPORTE_DETALLADO,gastos_filtrados)
                     print(gastos_filtrados)
+                    input("tecla para continuar....")
                 else:
                     gastos_filtrados = tabla_developer(gastosData,5,start_dt=start_dt,end_dt=end_dt)
                     print(gastos_filtrados)
+                    saveFile(REPORTE_DETALLADO,gastos_filtrados)
+                    input("tecla para continuar....")
+
+                
                     
                     
